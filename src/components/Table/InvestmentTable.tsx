@@ -19,6 +19,9 @@ import useApplicationsStore from "@/stores/useApplicationsStore";
 import { ColumnType, columns } from "./helpers";
 import useDialogModalStore from "@/stores/useDialogModalStore";
 import FilesModal from "../modals/FilesModal";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const InvestmentTable: React.FC = () => {
   const { applications, selectedRowIds, setSelectedRowIds, setApplications } = useApplicationsStore();
@@ -106,27 +109,33 @@ const InvestmentTable: React.FC = () => {
   const totalCount = applications.length;
 
   return (
-    <div className="container mx-auto px-4 sm:px-8">
-      <div>
-        <HeaderSection
-          rejectCount={rejectCount}
-          totalCount={totalCount}
-          onSort={onSort}
-          onPaginationSizeChange={onPaginationSizeChange}
-          onApprovalStatusChange={handleApprovalStatusChange}
-        />
-        <hr className="border-1 border-gray-300" />
-        <ActionSection
-          onRegisterClick={() => setIsFilesModalOpen(true)}
-          selectedRowCount={selectedRowCount}
-          shouldApplyStatusChange={shouldApplyStatusChange}
-          handleChangeApprovalStatus={handleChangeApprovalStatus}
-          handleApplyChanges={handleApplyChanges}
-          setIsApprovalRejectionOpen={setIsApprovalRejectionOpen}
-        />
-        <TableSection table={table} />
+    <>
+      <main className={`items-center p-4 !pt-0 ${inter.className}`}>
+        <div className="container mx-auto px-4 sm:px-8">
+          <div>
+            <HeaderSection
+              rejectCount={rejectCount}
+              totalCount={totalCount}
+              onSort={onSort}
+              onPaginationSizeChange={onPaginationSizeChange}
+              onApprovalStatusChange={handleApprovalStatusChange}
+            />
+            <hr className="border-1 border-gray-300" />
+            <ActionSection
+              onRegisterClick={() => setIsFilesModalOpen(true)}
+              selectedRowCount={selectedRowCount}
+              shouldApplyStatusChange={shouldApplyStatusChange}
+              handleChangeApprovalStatus={handleChangeApprovalStatus}
+              handleApplyChanges={handleApplyChanges}
+              setIsApprovalRejectionOpen={setIsApprovalRejectionOpen}
+            />
+            <TableSection table={table} />
+          </div>
+        </div>
+      </main>
+      <footer className="pb-20">
         <Pagination<ColumnType> table={table} />
-      </div>
+      </footer>
       <DialogModal />
       <ApprovalRejectionModal
         onSubmit={onSubmit}
@@ -135,7 +144,7 @@ const InvestmentTable: React.FC = () => {
       />
       <ApplicationEditModal />
       <FilesModal isOpen={isFilesModalOpen} setIsOpen={setIsFilesModalOpen} />
-    </div>
+    </>
   );
 };
 
