@@ -111,7 +111,7 @@ const InvestmentTable: React.FC = () => {
   return (
     <>
       <main className={`items-center p-4 !pt-0 ${inter.className}`}>
-        <div className="container mx-auto px-4 sm:px-8">
+        <div className="container mx-auto 2xl:px-8  xl:px-6 md:px-2 sm:px-2">
           <div>
             <HeaderSection
               rejectCount={rejectCount}
