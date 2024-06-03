@@ -21,8 +21,8 @@ const options = {
     { label: "승인일시순", value: "approvalDate" },
   ],
   approvalStatus: [
-    { label: "Approved", value: "승인완료" },
-    { label: "Approval denied", value: "승인거부" },
+    { label: "승인완료", value: "승인완료" },
+    { label: "승인거부", value: "승인거부" },
   ],
 };
 
