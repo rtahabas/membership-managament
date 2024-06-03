@@ -47,19 +47,19 @@ const HeaderSection: React.FC<Props> = ({
     </div>
     <div className="flex space-x-2 space-y-2 lg:space-y-0 mt-2 lg:mt-0 w-full lg:w-auto flex-col lg:flex-row">
       <Select
-        className="w-full lg:w-auto"
+        className="w-full lg:w-full"
         placeholder="보기 크기"
         onChange={onPaginationSizeChange}
         options={options.paginationSize}
       />
       <Select
-        className="w-full lg:w-auto"
+        className="w-full lg:w-full"
         placeholder="신청일시순"
         onChange={(e) => onSort(e as "approvalDate" | "requestDate")}
         options={options.sort}
       />
       <Select
-        className="w-full lg:w-auto"
+        className="w-full lg:w-full"
         placeholder="승인상태 변경"
         onChange={onApprovalStatusChange}
         options={options.approvalStatus}
