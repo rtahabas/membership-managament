@@ -110,7 +110,7 @@ const InvestmentTable: React.FC = () => {
 
   return (
     <>
-      <main className={`items-center p-4 !pt-0 ${inter.className}`}>
+      <main className={`items-center p-4 !pt-0 ${inter.className} font-sans`}>
         <div className="container mx-auto 2xl:px-8  xl:px-6 md:px-2 sm:px-2">
           <div>
             <HeaderSection
@@ -133,7 +133,7 @@ const InvestmentTable: React.FC = () => {
           </div>
         </div>
       </main>
-      <footer className="pb-20">
+      <footer className={`pb-20  ${inter.className} font-sans`}>
         <Pagination<ColumnType> table={table} />
       </footer>
       <DialogModal />
