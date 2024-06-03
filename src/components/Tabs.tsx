@@ -14,7 +14,7 @@ const tabs = [
 
 const Tabs: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-8">
+    <div className="container mx-auto lg:px-8 md:px-2 sm:px-2">
       <div className="flex items-center justify-start">
         <h1 className="text-2xl font-semibold text-gray-900 my-4">회원상세 </h1>
         <div className="flex items-center justify-center">
