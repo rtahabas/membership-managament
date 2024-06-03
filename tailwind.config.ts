@@ -31,6 +31,9 @@ const config: Config = {
         primary: "#2a3958",
         dark: "#222222",
       },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],
