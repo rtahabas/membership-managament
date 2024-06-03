@@ -32,7 +32,8 @@ const config: Config = {
         dark: "#222222",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["var(--font-inter)"],
+        mono: ["var(--font-roboto-mono)"],
       },
     },
   },

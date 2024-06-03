@@ -21,8 +21,6 @@ import useDialogModalStore from "@/stores/useDialogModalStore";
 import FilesModal from "../modals/FilesModal";
 import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
-
 const InvestmentTable: React.FC = () => {
   const { applications, selectedRowIds, setSelectedRowIds, setApplications } = useApplicationsStore();
   const { setDialogProps, setIsDialogOpen } = useDialogModalStore();
@@ -110,7 +108,7 @@ const InvestmentTable: React.FC = () => {
 
   return (
     <>
-      <main className={`items-center p-4 !pt-0 ${inter.className} font-sans`}>
+      <main className={`items-center p-4 !pt-0`}>
         <div className="container mx-auto 2xl:px-8  xl:px-6 md:px-2 sm:px-2">
           <div>
             <HeaderSection
@@ -133,7 +131,7 @@ const InvestmentTable: React.FC = () => {
           </div>
         </div>
       </main>
-      <footer className={`pb-20  ${inter.className} font-sans`}>
+      <footer className={`pb-20`}>
         <Pagination<ColumnType> table={table} />
       </footer>
       <DialogModal />
