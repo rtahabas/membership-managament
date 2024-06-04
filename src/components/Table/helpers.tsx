@@ -1,4 +1,4 @@
-import { CellContext, Row, createColumnHelper } from "@tanstack/react-table";
+import { CellContext, createColumnHelper } from "@tanstack/react-table";
 import { Application } from "../fakeData";
 import IndeterminateCheckbox from "./IndeterminateCheckbox";
 import Button from "../Button";

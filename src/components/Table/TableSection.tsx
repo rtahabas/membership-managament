@@ -1,10 +1,12 @@
 import { Table, flexRender } from "@tanstack/react-table";
-import { Application } from "../fakeData";
 import { ColumnType } from "./helpers";
 
 type Props = {
   table: Table<ColumnType>;
 };
+
+const colWidths = ["39px", "52px", "99px", "99px", "99px", "189px", "86px", "371px", "189px", "124px"];
+
 const TableSection: React.FC<Props> = ({ table }) => (
   <div className="overflow-x-auto">
     <div className="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
@@ -26,8 +28,8 @@ const TableSection: React.FC<Props> = ({ table }) => (
             <tr key={headerGroup.id} className="divide-x-2 divide-white">
               {headerGroup.headers.map((header) => (
                 <th
+                  style={{ minWidth: colWidths[header.index] }}
                   key={header.id}
-                  colSpan={header.colSpan}
                   className="px-5 border-gray-200 h-11 bg-light-blue text-center text-xs font-semibold text-gray-600 uppercase tracking-wider"
                 >
                   {flexRender(header.column.columnDef.header, header.getContext())}
@@ -41,6 +43,7 @@ const TableSection: React.FC<Props> = ({ table }) => (
             <tr key={row.id}>
               {row.getVisibleCells().map((cell) => (
                 <td
+                  style={{ minWidth: colWidths[cell.column.getIndex()] }}
                   key={cell.id}
                   className={`px-5 h-11 border-b ${
                     cell.row.index % 2 === 0 ? "bg-light-gray" : ""

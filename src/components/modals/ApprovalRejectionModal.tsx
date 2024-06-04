@@ -3,8 +3,6 @@ import Modal, { BaseModalProps } from "./Modal";
 import Image from "next/image";
 import Button from "../Button";
 import X from "@/assets/svg/x-close.svg";
-import { Application } from "../fakeData";
-import { useModalStore } from "@/stores/useModalStore";
 import useApplicationsStore from "@/stores/useApplicationsStore";
 import useDialogModalStore from "@/stores/useDialogModalStore";
 
