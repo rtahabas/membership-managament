@@ -16,7 +16,7 @@ const TableButton: React.FC<ButtonProps> = ({
   disabled = false,
 }) => {
   const baseStyle = `
-        lg:px-[18px] py-[7px] rounded-[10px] w-[61px] font-semibold focus:outline-none
+       px:0 lg:px-[18px] py-[7px] rounded-[10px] w-[61px] font-semibold focus:outline-none
         transition duration-200 ease-in-out bg-form-default text-dark
     `;
 
