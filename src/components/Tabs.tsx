@@ -29,7 +29,7 @@ const Tabs: React.FC = () => {
           {tabs.map((tab, index) => (
             <div
               key={index}
-              className={`w-full text-base p-2.5 text-center cursor-pointer border ${
+              className={`w-full flex items-center justify-center max-h-[46px] text-base p-2.5 text-center cursor-pointer border ${
                 index === 0
                   ? "rounded-tl-lg rounded-tr-lg lg:rounded-tr-none rounded-bl-none lg:rounded-bl-lg"
                   : index === tabs.length - 1
