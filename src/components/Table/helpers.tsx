@@ -27,7 +27,7 @@ const DocumentInspectButton: React.FC<DocumentInspectButton> = ({ info }) => {
   return (
     <Button
       onClick={() => handleClick(info.row.original)}
-      className=" px-0 lg:px-[18px] py-[7px] rounded-[10px] w-[61px] bg-form-default text-form-text !font-medium"
+      className=" px-0 xl:px-[18px] py-[7px] rounded-[10px] w-[61px] bg-form-default text-form-text !font-medium"
     >
       {info.renderValue()}
     </Button>
