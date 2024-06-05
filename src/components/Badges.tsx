@@ -7,7 +7,7 @@ interface BadgeProps {
   className?: string;
 }
 const baseStyle = `
-     w-[69px] inline-flex items-center  py-0.5  xl:px-2.5 rounded-full text-sm font-medium
+     w-[69px] inline-flex items-center  py-0.5  2xl:px-2.5 rounded-full text-sm font-medium
   `;
 
 const variantStyle = {

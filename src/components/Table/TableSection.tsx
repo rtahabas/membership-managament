@@ -45,7 +45,7 @@ const TableSection: React.FC<Props> = ({ table }) => (
                 <td
                   style={{ minWidth: colWidths[cell.column.getIndex()] }}
                   key={cell.id}
-                  className={`lg:px-5 h-11 border-b ${
+                  className={`2xl:px-5 h-11 border-b ${
                     cell.row.index % 2 === 0 ? "bg-light-gray" : ""
                   } text-sm text-center`}
                 >
