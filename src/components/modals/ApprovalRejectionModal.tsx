@@ -89,17 +89,19 @@ const ApprovalRejectionModal: React.FC<Props> = ({ onSubmit, ...baseModalProps }
         <form onSubmit={handleSave}>
           <div className="pt-5 px-6">
             <div className="flex border border-t-gray-300">
-              <label className="p-4 text-sm font-medium text-gray-700 bg-light-blue min-w-40 max-w-40">회원번호</label>
+              <label className="p-4 text-sm font-medium text-gray-700 bg-light-blue min-w-28 sm:min-w-40 max-w-40">
+                회원번호
+              </label>
               <input type="text" value={no} disabled className="w-full text-sm bg-white pl-5" />
             </div>
             <div className="flex border border-b-gray-300">
-              <label className="p-4 text-sm font-medium text-gray-700 min-w-40 max-w-40 bg-light-blue">
+              <label className="p-4 text-sm font-medium text-gray-700 min-w-28 sm:min-w-40 max-w-40 bg-light-blue">
                 회원명/법인명
               </label>
               <input type="text" value={names} disabled className="w-full text-sm bg-white pl-5" />
             </div>
             <div className="flex border border-l-gray-300">
-              <label className="flex items-center p-4 text-sm font-medium text-gray-700 min-w-40 max-w-40 bg-light-blue">
+              <label className="flex items-center p-4 text-sm font-medium text-gray-700 min-w-28 sm:min-w-40 max-w-40 bg-light-blue">
                 승인거부 사유
               </label>
               <div className="pt-2 pl-5 w-full pb-4 border-b-gray-300">
@@ -134,13 +136,15 @@ const ApprovalRejectionModal: React.FC<Props> = ({ onSubmit, ...baseModalProps }
             </div>
             <div className="flex items-center mt-5 flex-col lg:flex-row">
               <div className="flex border w-full border-b-gray-300 mr-0 lg:mr-1.5">
-                <label className="p-4 text-sm font-medium text-gray-700 min-w-40 max-w-40 bg-light-blue">
+                <label className="p-4 text-sm font-medium text-gray-700 min-w-28 sm:min-w-40 max-w-40 bg-light-blue">
                   최근저장일시
                 </label>
                 <input type="text" value={lastDate} disabled className="w-full text-sm bg-white pl-5" />
               </div>
               <div className="flex border w-full border-b-gray-300">
-                <label className="p-4 text-sm font-medium text-gray-700 min-w-40 max-w-40 bg-light-blue">관리자</label>
+                <label className="p-4 text-sm font-medium text-gray-700 min-w-28 sm:min-w-40 max-w-40 bg-light-blue">
+                  관리자
+                </label>
                 <input type="text" value={manager} disabled className="w-full text-sm bg-white pl-5" />
               </div>
             </div>

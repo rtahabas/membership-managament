@@ -178,7 +178,7 @@ const ApplicationEditModal: React.FC = () => {
             <div className="w-1 h-1 bg-form-warning-text rounded-full self-start ml-1"></div>
           </label>
           <Select
-            className=" ml-2 w-[282px] font-light"
+            className=" ml-2  sm:w-[282px] font-light"
             placeholder={options[0].label}
             onChange={handleChange}
             options={options}
