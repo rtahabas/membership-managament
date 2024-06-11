@@ -11,9 +11,9 @@ const baseStyle = `
   `;
 
 const variantStyle = {
-  승인완료: "bg-green-100 text-statust-text-approval",
-  승인대기: "bg-orange-100 text-statust-text-waiting",
-  승인거부: "bg-red-100 text-statust-text-refusal",
+  승인완료: "bg-green-100 text-status-text-approval",
+  승인대기: "bg-orange-100 text-status-text-waiting",
+  승인거부: "bg-red-100 text-status-text-refusal",
 };
 
 const Badge: React.FC<BadgeProps> = ({ children, variant = "승인완료", className = "" }) => {
